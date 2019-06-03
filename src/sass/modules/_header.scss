@@ -1,0 +1,44 @@
+.header {
+  width: 100%;
+  background-color: $color__header-background;
+  z-index: 999;
+  &__list {
+    display: inline-block;
+    font-weight: 400;
+    &-account {
+      float: right;
+    }
+  }
+  &__logo {
+    display: inline-block;
+    background-color: $color__secondary;
+    img {
+      height: 1rem;
+      padding: 0 1.125rem;
+    }
+  }
+  &__item {
+    display: inline-block;
+    padding: 1rem 0;
+    &:first-child {
+      left: 0;
+      &.header__item:hover {
+        background-color: $color__primary;
+      }
+    }
+    &:hover {
+      background-color: $color__header-hover;
+      transition: 1s;
+      a {
+        transition: inherit;
+        color: $color__info;
+      }
+    }
+    &-link {
+      color: $color__header-color;
+      padding: 1rem;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}

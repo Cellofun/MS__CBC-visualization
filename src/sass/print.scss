@@ -1,0 +1,20 @@
+.header,
+.content__title-button,
+.content__buttons {
+  display: none;
+}
+body {
+  background-color: white;
+}
+.container {
+  margin: 0;
+}
+.content {
+  width: 100vw;
+  &__title {
+    border-bottom: 0;
+  }
+}
+.fadein {
+  opacity: 1;
+}

@@ -1,0 +1,49 @@
+.btn {
+  @include border-radius($border__circle);
+  font-size: 0.75rem;
+  overflow: hidden;
+  outline: 0;
+  padding: 0.5rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: 1s;
+  position: relative;
+  transform: translate3d(0, 0, 0);
+}
+.btn-primary {
+  padding: calc(0.5rem + 2px) calc(1.25rem + 2px);
+  color: white;
+  background-image: linear-gradient(to right, lighten($color__success, 10%) 0%, lighten($color__info, 10%) 51%, lighten($color__danger, 10%) 100%);
+  background-size: 200% auto;
+  &:hover {
+    background-position: right center;
+    cursor: pointer;
+  }
+}
+.btn-primary-outline {
+  border: solid 2px transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+  linear-gradient(to right, lighten($color__success, 10%) 0%, lighten($color__info, 10%) 51%, lighten($color__danger, 10%) 100%);
+  background-size: 200% auto;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px white inset;
+  &:hover {
+    background-position: right center;
+    color: white;
+    box-shadow: none;
+    cursor: pointer;
+  }
+}
+.btn-secondary-outline {
+  color: $color__main;
+  border: solid 2px $color__secondary;
+  background-color: transparent;
+  &:hover {
+    background-color: $color__secondary;
+    transition: 1s;
+    cursor: pointer;
+  }
+}

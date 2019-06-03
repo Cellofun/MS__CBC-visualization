@@ -1,0 +1,10 @@
+mixin header-menu()
+    ul.header__list.header__list-menu
+        li.header__item.header__logo
+            a.header__logo-link(href='/')
+                img(src='../media/tpu_favicon.ico')
+        block
+
+mixin header-item(options)
+    li.header__item
+        a.header__item-link(href=options.href)= options.name

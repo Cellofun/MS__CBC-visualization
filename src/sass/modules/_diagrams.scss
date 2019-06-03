@@ -1,0 +1,13 @@
+.graph {
+  &__title {
+    color: $color__main;
+  }
+  &__axis-x,
+  &__axis-y {
+    font-size: 0.75rem;
+    font-weight: 300;
+  }
+  &__tooltip-text {
+    fill: $color__text;
+  }
+}

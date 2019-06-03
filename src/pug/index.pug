@@ -1,0 +1,28 @@
+extends general/main
+
+block content
+    .container.container__animate
+       .content
+            .content__title
+                .content__title-text
+                    h3 Blood test
+                    span Lymphocytes count
+                .content__title-button
+                    input.btn.btn-primary-outline(type="button" onclick="printDocument()" value="print diagrams")
+            .content__body
+                .content__buttons
+                    .content__buttons-label
+                        span Blood test data
+                    .content__buttons-value
+                        label#file_label.btn.btn-primary(for="file_input") choose a .csv file
+                        input#file_input.input-file(type="file" accept=".csv" name="file")
+                        input#file_destroy.btn.btn-secondary-outline(type="button" value="clean")
+                #select_container.content__buttons
+                    .content__buttons-label
+                        span Code of patient
+                    #diagrams_select.content__buttons-value
+                #diagrams_container
+    script
+        | function printDocument() {
+        |     window.print();
+        | }
